@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		901FCEA525E3AD97007E45D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCEA425E3AD97007E45D1 /* AppDelegate.swift */; };
 		901FCEA725E3AD97007E45D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCEA625E3AD97007E45D1 /* SceneDelegate.swift */; };
-		901FCEA925E3AD97007E45D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCEA825E3AD97007E45D1 /* ViewController.swift */; };
-		901FCEAC25E3AD97007E45D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901FCEAA25E3AD97007E45D1 /* Main.storyboard */; };
 		901FCEAE25E3AD99007E45D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901FCEAD25E3AD99007E45D1 /* Assets.xcassets */; };
 		901FCEB125E3AD99007E45D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901FCEAF25E3AD99007E45D1 /* LaunchScreen.storyboard */; };
 		901FCEBC25E3AD9A007E45D1 /* FizzBuzzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCEBB25E3AD9A007E45D1 /* FizzBuzzerTests.swift */; };
@@ -22,6 +20,8 @@
 		901FCEFD25E3EFC7007E45D1 /* FizzBuzzFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCEFC25E3EFC7007E45D1 /* FizzBuzzFormViewModelTests.swift */; };
 		901FCF0125E3EFD4007E45D1 /* FizzBuzzRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCF0025E3EFD4007E45D1 /* FizzBuzzRepositoryTests.swift */; };
 		901FCF0925E3F526007E45D1 /* FizzBuzzListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCF0825E3F526007E45D1 /* FizzBuzzListViewModelTests.swift */; };
+		901FCF1B25E3FA70007E45D1 /* FizzBuzzFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCF1A25E3FA70007E45D1 /* FizzBuzzFormViewController.swift */; };
+		901FCF2325E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901FCF2225E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,6 @@
 		901FCEA125E3AD97007E45D1 /* FizzBuzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		901FCEA425E3AD97007E45D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		901FCEA625E3AD97007E45D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		901FCEA825E3AD97007E45D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		901FCEAB25E3AD97007E45D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		901FCEAD25E3AD99007E45D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		901FCEB025E3AD99007E45D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		901FCEB225E3AD99007E45D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +52,8 @@
 		901FCEFC25E3EFC7007E45D1 /* FizzBuzzFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzFormViewModelTests.swift; sourceTree = "<group>"; };
 		901FCF0025E3EFD4007E45D1 /* FizzBuzzRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzRepositoryTests.swift; sourceTree = "<group>"; };
 		901FCF0825E3F526007E45D1 /* FizzBuzzListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzListViewModelTests.swift; sourceTree = "<group>"; };
+		901FCF1A25E3FA70007E45D1 /* FizzBuzzFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzFormViewController.swift; sourceTree = "<group>"; };
+		901FCF2225E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FizzBuzzFormStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,12 +95,11 @@
 		901FCEA325E3AD97007E45D1 /* FizzBuzzer */ = {
 			isa = PBXGroup;
 			children = (
+				901FCF1925E3FA43007E45D1 /* ViewController */,
 				901FCEEB25E3C3D4007E45D1 /* ViewModel */,
 				901FCED725E3B105007E45D1 /* Model */,
 				901FCEA425E3AD97007E45D1 /* AppDelegate.swift */,
 				901FCEA625E3AD97007E45D1 /* SceneDelegate.swift */,
-				901FCEA825E3AD97007E45D1 /* ViewController.swift */,
-				901FCEAA25E3AD97007E45D1 /* Main.storyboard */,
 				901FCEAD25E3AD99007E45D1 /* Assets.xcassets */,
 				901FCEAF25E3AD99007E45D1 /* LaunchScreen.storyboard */,
 				901FCEB225E3AD99007E45D1 /* Info.plist */,
@@ -137,6 +136,15 @@
 				901FCEF825E3EDC0007E45D1 /* FizzBuzzListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		901FCF1925E3FA43007E45D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				901FCF1A25E3FA70007E45D1 /* FizzBuzzFormViewController.swift */,
+				901FCF2225E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				901FCEB125E3AD99007E45D1 /* LaunchScreen.storyboard in Resources */,
+				901FCF2325E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard in Resources */,
 				901FCEAE25E3AD99007E45D1 /* Assets.xcassets in Resources */,
-				901FCEAC25E3AD97007E45D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901FCF1B25E3FA70007E45D1 /* FizzBuzzFormViewController.swift in Sources */,
 				901FCEF925E3EDC0007E45D1 /* FizzBuzzListViewModel.swift in Sources */,
-				901FCEA925E3AD97007E45D1 /* ViewController.swift in Sources */,
 				901FCEF325E3ECA1007E45D1 /* FizzBuzzRepository.swift in Sources */,
 				901FCEA525E3AD97007E45D1 /* AppDelegate.swift in Sources */,
 				901FCEED25E3C53F007E45D1 /* FizzBuzzFormViewModel.swift in Sources */,
@@ -272,14 +280,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		901FCEAA25E3AD97007E45D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				901FCEAB25E3AD97007E45D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		901FCEAF25E3AD99007E45D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

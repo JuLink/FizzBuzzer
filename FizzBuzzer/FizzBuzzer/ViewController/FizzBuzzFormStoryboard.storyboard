@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fizz Buzz Form View Controller-->
+        <scene sceneID="bHX-ia-N6N">
+            <objects>
+                <viewController storyboardIdentifier="FizzBuzzFormViewControllerID" id="lZv-hk-fdM" customClass="FizzBuzzFormViewController" customModule="FizzBuzzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="upg-S2-lEB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkH-LL-KNr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VCV-Tt-2Fc">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="int1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DL1-sn-ZFh">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="Wht-Lw-RMN"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="int2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqt-wT-kTp">
+                                                <rect key="frame" x="0.0" y="42" width="320" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="Shb-is-epB"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="limit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKS-kA-zTM">
+                                                <rect key="frame" x="0.0" y="84" width="320" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="kQX-p8-8at"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="str1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2U-2q-sDJ">
+                                                <rect key="frame" x="0.0" y="126" width="320" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="X8W-dT-gZA"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="str2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kor-lO-eMF">
+                                                <rect key="frame" x="0.0" y="168" width="320" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="8hd-JF-2QY"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F74-nm-gPb">
+                                                <rect key="frame" x="0.0" y="210" width="320" height="30"/>
+                                                <state key="normal" title="Fizz Buzz !"/>
+                                                <connections>
+                                                    <action selector="showFizzBuzz:" destination="lZv-hk-fdM" eventType="touchUpInside" id="eUF-X1-Brq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VCV-Tt-2Fc" firstAttribute="leading" secondItem="h43-dE-QSW" secondAttribute="leading" id="Daf-KO-POS"/>
+                                    <constraint firstItem="VCV-Tt-2Fc" firstAttribute="bottom" secondItem="h43-dE-QSW" secondAttribute="bottom" id="OiI-qe-RiO"/>
+                                    <constraint firstItem="VCV-Tt-2Fc" firstAttribute="trailing" secondItem="h43-dE-QSW" secondAttribute="trailing" id="s4A-Nb-DT8"/>
+                                    <constraint firstItem="h43-dE-QSW" firstAttribute="top" secondItem="VCV-Tt-2Fc" secondAttribute="top" id="yYm-sH-v8L"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="h43-dE-QSW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uLi-SI-d8W"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rLo-gd-9Zd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TkH-LL-KNr" firstAttribute="width" secondItem="upg-S2-lEB" secondAttribute="width" id="9Ro-ah-guu"/>
+                            <constraint firstItem="TkH-LL-KNr" firstAttribute="leading" secondItem="upg-S2-lEB" secondAttribute="leading" id="B85-Kf-F0v"/>
+                            <constraint firstItem="TkH-LL-KNr" firstAttribute="height" secondItem="upg-S2-lEB" secondAttribute="height" id="JMI-zq-eRR"/>
+                            <constraint firstAttribute="trailing" secondItem="TkH-LL-KNr" secondAttribute="trailing" id="a38-Xo-4DF"/>
+                            <constraint firstItem="TkH-LL-KNr" firstAttribute="top" secondItem="upg-S2-lEB" secondAttribute="top" id="e4g-IS-W7C"/>
+                            <constraint firstAttribute="bottom" secondItem="TkH-LL-KNr" secondAttribute="bottom" id="jli-jk-wf8"/>
+                            <constraint firstItem="VCV-Tt-2Fc" firstAttribute="width" secondItem="upg-S2-lEB" secondAttribute="width" id="kv0-bn-cyB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fizzBuzzButton" destination="F74-nm-gPb" id="GUA-Nw-R7G"/>
+                        <outlet property="int1TextField" destination="DL1-sn-ZFh" id="Y5L-oQ-Zdf"/>
+                        <outlet property="int2TextField" destination="Bqt-wT-kTp" id="3I0-Ct-f2l"/>
+                        <outlet property="limitTextField" destination="AKS-kA-zTM" id="G72-Xx-SRG"/>
+                        <outlet property="scrollView" destination="TkH-LL-KNr" id="qt5-sX-eyS"/>
+                        <outlet property="str1TextField" destination="g2U-2q-sDJ" id="gXc-Ak-ePw"/>
+                        <outlet property="str2TextField" destination="Kor-lO-eMF" id="bOc-mZ-SDz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQP-vm-04H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="-17"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
