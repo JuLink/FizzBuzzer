@@ -37,6 +37,8 @@ class FizzBuzzFormViewController: UIViewController {
         self.navigationItem.title = "FizzBuzz"
         self.navigationController?.tabBarItem.title = "FizzBuzz"
         self.navigationController?.tabBarItem.image = UIImage(systemName: "zzz")
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
 
         // Do any additional setup after loading the view.
         self.int1TextField.delegate = self

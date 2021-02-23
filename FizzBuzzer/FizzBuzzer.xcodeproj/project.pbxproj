@@ -22,6 +22,12 @@
 		901FCF0925E3F526007E45D1 /* FizzBuzzListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCF0825E3F526007E45D1 /* FizzBuzzListViewModelTests.swift */; };
 		901FCF1B25E3FA70007E45D1 /* FizzBuzzFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCF1A25E3FA70007E45D1 /* FizzBuzzFormViewController.swift */; };
 		901FCF2325E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901FCF2225E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard */; };
+		9026D09725E4FD0B00036A71 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026D09625E4FD0B00036A71 /* StatisticsView.swift */; };
+		9026D09B25E50D2F00036A71 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026D09A25E50D2F00036A71 /* StatisticsViewModel.swift */; };
+		9026D0A025E50D7800036A71 /* FormHitStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026D09F25E50D7800036A71 /* FormHitStatistic.swift */; };
+		9026D0A625E50D9E00036A71 /* FormHitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026D0A525E50D9E00036A71 /* FormHitFactory.swift */; };
+		9026D0AC25E510DE00036A71 /* FormHitStatisticsFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026D0AB25E510DE00036A71 /* FormHitStatisticsFactoryTests.swift */; };
+		90968D7F25E545A400A7C7E2 /* StatisticsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90968D7E25E545A400A7C7E2 /* StatisticsViewModelTests.swift */; };
 		90E08F2825E4F23D0082DEC2 /* FizzBuzzListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E08F2725E4F23D0082DEC2 /* FizzBuzzListStoryboard.storyboard */; };
 		90E08F2C25E4F2560082DEC2 /* FizzBuzzListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E08F2B25E4F2560082DEC2 /* FizzBuzzListTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +62,12 @@
 		901FCF0825E3F526007E45D1 /* FizzBuzzListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzListViewModelTests.swift; sourceTree = "<group>"; };
 		901FCF1A25E3FA70007E45D1 /* FizzBuzzFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzFormViewController.swift; sourceTree = "<group>"; };
 		901FCF2225E3FAA2007E45D1 /* FizzBuzzFormStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FizzBuzzFormStoryboard.storyboard; sourceTree = "<group>"; };
+		9026D09625E4FD0B00036A71 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		9026D09A25E50D2F00036A71 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		9026D09F25E50D7800036A71 /* FormHitStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormHitStatistic.swift; sourceTree = "<group>"; };
+		9026D0A525E50D9E00036A71 /* FormHitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormHitFactory.swift; sourceTree = "<group>"; };
+		9026D0AB25E510DE00036A71 /* FormHitStatisticsFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormHitStatisticsFactoryTests.swift; sourceTree = "<group>"; };
+		90968D7E25E545A400A7C7E2 /* StatisticsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModelTests.swift; sourceTree = "<group>"; };
 		90E08F2725E4F23D0082DEC2 /* FizzBuzzListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FizzBuzzListStoryboard.storyboard; sourceTree = "<group>"; };
 		90E08F2B25E4F2560082DEC2 /* FizzBuzzListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +111,7 @@
 		901FCEA325E3AD97007E45D1 /* FizzBuzzer */ = {
 			isa = PBXGroup;
 			children = (
-				901FCF1925E3FA43007E45D1 /* ViewController */,
+				901FCF1925E3FA43007E45D1 /* View */,
 				901FCEEB25E3C3D4007E45D1 /* ViewModel */,
 				901FCED725E3B105007E45D1 /* Model */,
 				901FCEA425E3AD97007E45D1 /* AppDelegate.swift */,
@@ -120,6 +132,8 @@
 				901FCEFC25E3EFC7007E45D1 /* FizzBuzzFormViewModelTests.swift */,
 				901FCF0025E3EFD4007E45D1 /* FizzBuzzRepositoryTests.swift */,
 				901FCF0825E3F526007E45D1 /* FizzBuzzListViewModelTests.swift */,
+				9026D0AB25E510DE00036A71 /* FormHitStatisticsFactoryTests.swift */,
+				90968D7E25E545A400A7C7E2 /* StatisticsViewModelTests.swift */,
 			);
 			path = FizzBuzzerTests;
 			sourceTree = "<group>";
@@ -138,17 +152,37 @@
 			children = (
 				901FCEEC25E3C53F007E45D1 /* FizzBuzzFormViewModel.swift */,
 				901FCEF825E3EDC0007E45D1 /* FizzBuzzListViewModel.swift */,
+				9026D09A25E50D2F00036A71 /* StatisticsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		901FCF1925E3FA43007E45D1 /* ViewController */ = {
+		901FCF1925E3FA43007E45D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9026D09525E4FCF100036A71 /* Statistics */,
 				90E08F2625E4F21E0082DEC2 /* List */,
 				90E08F2525E4F2100082DEC2 /* Form */,
 			);
-			path = ViewController;
+			path = View;
+			sourceTree = "<group>";
+		};
+		9026D09525E4FCF100036A71 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				9026D09E25E50D6800036A71 /* UIModel */,
+				9026D09625E4FD0B00036A71 /* StatisticsView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		9026D09E25E50D6800036A71 /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				9026D09F25E50D7800036A71 /* FormHitStatistic.swift */,
+				9026D0A525E50D9E00036A71 /* FormHitFactory.swift */,
+			);
+			path = UIModel;
 			sourceTree = "<group>";
 		};
 		90E08F2525E4F2100082DEC2 /* Form */ = {
@@ -270,10 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9026D0A625E50D9E00036A71 /* FormHitFactory.swift in Sources */,
 				901FCF1B25E3FA70007E45D1 /* FizzBuzzFormViewController.swift in Sources */,
 				90E08F2C25E4F2560082DEC2 /* FizzBuzzListTableViewController.swift in Sources */,
 				901FCEF925E3EDC0007E45D1 /* FizzBuzzListViewModel.swift in Sources */,
+				9026D09B25E50D2F00036A71 /* StatisticsViewModel.swift in Sources */,
+				9026D0A025E50D7800036A71 /* FormHitStatistic.swift in Sources */,
 				901FCEF325E3ECA1007E45D1 /* FizzBuzzRepository.swift in Sources */,
+				9026D09725E4FD0B00036A71 /* StatisticsView.swift in Sources */,
 				901FCEA525E3AD97007E45D1 /* AppDelegate.swift in Sources */,
 				901FCEED25E3C53F007E45D1 /* FizzBuzzFormViewModel.swift in Sources */,
 				901FCED925E3B1BB007E45D1 /* FizzBuzzer.swift in Sources */,
@@ -286,7 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				901FCEBC25E3AD9A007E45D1 /* FizzBuzzerTests.swift in Sources */,
+				9026D0AC25E510DE00036A71 /* FormHitStatisticsFactoryTests.swift in Sources */,
 				901FCF0925E3F526007E45D1 /* FizzBuzzListViewModelTests.swift in Sources */,
+				90968D7F25E545A400A7C7E2 /* StatisticsViewModelTests.swift in Sources */,
 				901FCF0125E3EFD4007E45D1 /* FizzBuzzRepositoryTests.swift in Sources */,
 				901FCEFD25E3EFC7007E45D1 /* FizzBuzzFormViewModelTests.swift in Sources */,
 				901FCEE625E3B9CC007E45D1 /* FizzBuzzModelTests.swift in Sources */,

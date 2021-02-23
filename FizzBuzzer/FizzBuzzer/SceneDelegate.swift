@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,7 +26,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let fizzbuzzFormVC = storyboard.instantiateViewController(identifier: FizzBuzzFormViewController.storyboardId) { (coder) -> FizzBuzzFormViewController? in
             FizzBuzzFormViewController(coder: coder, viewModel: formViewModel)
         }
-        tabBarVC.viewControllers = [UINavigationController(rootViewController: fizzbuzzFormVC)]
+        
+        let statisticsViewModel = StatisticsViewModel(repository: repository)
+        let hostingViewcontroller = UIHostingController(rootView: StatisticsView(viewModel: statisticsViewModel))
+        
+        tabBarVC.viewControllers = [UINavigationController(rootViewController: fizzbuzzFormVC), hostingViewcontroller]
+        
+        hostingViewcontroller.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
         
         self.window = UIWindow(windowScene: windowScene)
         self.window?.rootViewController = tabBarVC
