@@ -16,10 +16,12 @@ class StatisticsViewModel: ObservableObject {
     init(repository: Repository = FizzBuzzRepository(), factory: StatisticsFactory = FormHitStatisticsFactory.shared) {
         self.repository = repository
         self.factory = factory
-    }
-    
-    func load() {
-        self.formHitStatistics = self.factory.hitForms(from: self.repository.fizzBuzzParametersHits)
+        
+        self.repository.fizzBuzzParametersHitsPublisher
+            .map {
+                self.factory.hitForms(from: $0)
+            }
+            .assign(to: &self.$formHitStatistics)
     }
     
     var totalNumberOfHitTitle : String {

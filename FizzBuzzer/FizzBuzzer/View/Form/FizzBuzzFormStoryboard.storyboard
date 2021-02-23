@@ -1,118 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Fizz Buzz Form View Controller-->
-        <scene sceneID="bHX-ia-N6N">
+        <scene sceneID="GHW-vz-Gyf">
             <objects>
-                <viewController storyboardIdentifier="FizzBuzzFormViewControllerID" id="lZv-hk-fdM" customClass="FizzBuzzFormViewController" customModule="FizzBuzzer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="upg-S2-lEB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                <tableViewController storyboardIdentifier="FizzBuzzFormViewControllerID" id="9Rb-ai-aFh" customClass="FizzBuzzFormViewController" customModule="FizzBuzzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="o3z-um-tP9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkH-LL-KNr">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VCV-Tt-2Fc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="int1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DL1-sn-ZFh">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                <connections>
-                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="Wht-Lw-RMN"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="int2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqt-wT-kTp">
-                                                <rect key="frame" x="0.0" y="42" width="320" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                <connections>
-                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="Shb-is-epB"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="limit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKS-kA-zTM">
-                                                <rect key="frame" x="0.0" y="84" width="320" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                <connections>
-                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="kQX-p8-8at"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="str1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2U-2q-sDJ">
-                                                <rect key="frame" x="0.0" y="126" width="320" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                <connections>
-                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="X8W-dT-gZA"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="str2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kor-lO-eMF">
-                                                <rect key="frame" x="0.0" y="168" width="320" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                <connections>
-                                                    <action selector="textDidChange:" destination="lZv-hk-fdM" eventType="editingChanged" id="8hd-JF-2QY"/>
-                                                </connections>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F74-nm-gPb">
-                                                <rect key="frame" x="0.0" y="210" width="320" height="30"/>
-                                                <state key="normal" title="Fizz Buzz !"/>
-                                                <connections>
-                                                    <action selector="showFizzBuzz:" destination="lZv-hk-fdM" eventType="touchUpInside" id="eUF-X1-Brq"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="VCV-Tt-2Fc" firstAttribute="leading" secondItem="h43-dE-QSW" secondAttribute="leading" id="Daf-KO-POS"/>
-                                    <constraint firstItem="VCV-Tt-2Fc" firstAttribute="bottom" secondItem="h43-dE-QSW" secondAttribute="bottom" id="OiI-qe-RiO"/>
-                                    <constraint firstItem="VCV-Tt-2Fc" firstAttribute="trailing" secondItem="h43-dE-QSW" secondAttribute="trailing" id="s4A-Nb-DT8"/>
-                                    <constraint firstItem="h43-dE-QSW" firstAttribute="top" secondItem="VCV-Tt-2Fc" secondAttribute="top" id="yYm-sH-v8L"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="h43-dE-QSW"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="uLi-SI-d8W"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="rLo-gd-9Zd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="TkH-LL-KNr" firstAttribute="width" secondItem="upg-S2-lEB" secondAttribute="width" id="9Ro-ah-guu"/>
-                            <constraint firstItem="TkH-LL-KNr" firstAttribute="leading" secondItem="upg-S2-lEB" secondAttribute="leading" id="B85-Kf-F0v"/>
-                            <constraint firstItem="TkH-LL-KNr" firstAttribute="height" secondItem="upg-S2-lEB" secondAttribute="height" id="JMI-zq-eRR"/>
-                            <constraint firstAttribute="trailing" secondItem="TkH-LL-KNr" secondAttribute="trailing" id="a38-Xo-4DF"/>
-                            <constraint firstItem="TkH-LL-KNr" firstAttribute="top" secondItem="upg-S2-lEB" secondAttribute="top" id="e4g-IS-W7C"/>
-                            <constraint firstAttribute="bottom" secondItem="TkH-LL-KNr" secondAttribute="bottom" id="jli-jk-wf8"/>
-                            <constraint firstItem="VCV-Tt-2Fc" firstAttribute="width" secondItem="upg-S2-lEB" secondAttribute="width" id="kv0-bn-cyB"/>
-                        </constraints>
-                    </view>
+                        <sections>
+                            <tableViewSection headerTitle="Fizz Buzz Parameters" id="EoZ-uG-4gy">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="dNw-fL-VBN">
+                                        <rect key="frame" x="16" y="55.5" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dNw-fL-VBN" id="hKH-cE-qZw">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Integer (e.g. 3)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="375-sV-kJM">
+                                                    <rect key="frame" x="16" y="11" width="311" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    <connections>
+                                                        <action selector="textDidChange:" destination="9Rb-ai-aFh" eventType="editingChanged" id="Yr5-PG-qaH"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="375-sV-kJM" secondAttribute="bottom" id="Izn-c4-ifG"/>
+                                                <constraint firstItem="375-sV-kJM" firstAttribute="leading" secondItem="hKH-cE-qZw" secondAttribute="leadingMargin" id="NMs-J6-6Do"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="375-sV-kJM" secondAttribute="trailing" id="g6r-8W-Tef"/>
+                                                <constraint firstItem="375-sV-kJM" firstAttribute="top" secondItem="hKH-cE-qZw" secondAttribute="topMargin" id="zjZ-cO-OmC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="4JT-54-u1T">
+                                        <rect key="frame" x="16" y="99.5" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4JT-54-u1T" id="c0D-Y4-AR2">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First String (e.g. &quot;Fizz&quot;)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nQ3-dD-Jjv">
+                                                    <rect key="frame" x="16" y="11" width="311" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    <connections>
+                                                        <action selector="textDidChange:" destination="9Rb-ai-aFh" eventType="editingChanged" id="eYB-6n-GWy"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nQ3-dD-Jjv" firstAttribute="top" secondItem="c0D-Y4-AR2" secondAttribute="topMargin" id="7Jr-kW-oEd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nQ3-dD-Jjv" secondAttribute="trailing" id="Vca-Il-60R"/>
+                                                <constraint firstItem="nQ3-dD-Jjv" firstAttribute="leading" secondItem="c0D-Y4-AR2" secondAttribute="leadingMargin" id="mvi-o1-7hm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nQ3-dD-Jjv" secondAttribute="bottom" id="va4-zq-6T4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="EFD-LT-OiS">
+                                        <rect key="frame" x="16" y="143.5" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EFD-LT-OiS" id="KFV-Bk-8e3">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Second Integer (e.g. &quot;5&quot;)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-rS-kXs">
+                                                    <rect key="frame" x="16" y="11" width="311" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    <connections>
+                                                        <action selector="textDidChange:" destination="9Rb-ai-aFh" eventType="editingChanged" id="X8H-wE-Lln"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0dS-rS-kXs" secondAttribute="trailing" id="0La-ya-cvp"/>
+                                                <constraint firstItem="0dS-rS-kXs" firstAttribute="top" secondItem="KFV-Bk-8e3" secondAttribute="topMargin" id="0Ya-cI-6W2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0dS-rS-kXs" secondAttribute="bottom" id="hyi-vn-Z7o"/>
+                                                <constraint firstItem="0dS-rS-kXs" firstAttribute="leading" secondItem="KFV-Bk-8e3" secondAttribute="leadingMargin" id="xHS-9Y-hP3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Ikf-le-MKW">
+                                        <rect key="frame" x="16" y="187.5" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ikf-le-MKW" id="1qO-0f-2Oz">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Second String (e.g. &quot;Buzz&quot;)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ysj-Cn-DPo">
+                                                    <rect key="frame" x="16" y="11" width="311" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    <connections>
+                                                        <action selector="textDidChange:" destination="9Rb-ai-aFh" eventType="editingChanged" id="wAw-P0-eMs"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ysj-Cn-DPo" firstAttribute="top" secondItem="1qO-0f-2Oz" secondAttribute="topMargin" id="1ca-gQ-aQE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ysj-Cn-DPo" secondAttribute="trailing" id="7KO-bp-6ym"/>
+                                                <constraint firstItem="ysj-Cn-DPo" firstAttribute="leading" secondItem="1qO-0f-2Oz" secondAttribute="leadingMargin" id="UaE-gM-Sh1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ysj-Cn-DPo" secondAttribute="bottom" id="iIP-Fv-SS8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Wqc-JQ-C29">
+                                        <rect key="frame" x="16" y="231.5" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wqc-JQ-C29" id="Ijf-DW-03T">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Limit (e.g. 100)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yY8-PF-8bY">
+                                                    <rect key="frame" x="16" y="11" width="311" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    <connections>
+                                                        <action selector="textDidChange:" destination="9Rb-ai-aFh" eventType="editingChanged" id="fEN-NI-o9t"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yY8-PF-8bY" firstAttribute="top" secondItem="Ijf-DW-03T" secondAttribute="topMargin" id="TEn-X2-lBQ"/>
+                                                <constraint firstItem="yY8-PF-8bY" firstAttribute="leading" secondItem="Ijf-DW-03T" secondAttribute="leadingMargin" id="smt-2Q-gUx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yY8-PF-8bY" secondAttribute="bottom" id="spw-fC-mFe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yY8-PF-8bY" secondAttribute="trailing" id="uOw-rd-9hh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="iP4-tj-2Dh">
+                                        <rect key="frame" x="16" y="275.5" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iP4-tj-2Dh" id="ciq-mx-pKn">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xA-Rb-naV">
+                                                    <rect key="frame" x="134.5" y="7" width="74" height="30"/>
+                                                    <state key="normal" title="Fizz Buzz !"/>
+                                                    <connections>
+                                                        <action selector="showFizzBuzz:" destination="9Rb-ai-aFh" eventType="touchUpInside" id="Dpk-Wt-0a5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6xA-Rb-naV" firstAttribute="centerY" secondItem="ciq-mx-pKn" secondAttribute="centerY" id="6Cq-q2-zc7"/>
+                                                <constraint firstItem="6xA-Rb-naV" firstAttribute="centerX" secondItem="ciq-mx-pKn" secondAttribute="centerX" id="cgU-y5-7a7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9Rb-ai-aFh" id="1rp-jS-vzS"/>
+                            <outlet property="delegate" destination="9Rb-ai-aFh" id="H1k-fV-8UL"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <outlet property="fizzBuzzButton" destination="F74-nm-gPb" id="GUA-Nw-R7G"/>
-                        <outlet property="int1TextField" destination="DL1-sn-ZFh" id="Y5L-oQ-Zdf"/>
-                        <outlet property="int2TextField" destination="Bqt-wT-kTp" id="3I0-Ct-f2l"/>
-                        <outlet property="limitTextField" destination="AKS-kA-zTM" id="G72-Xx-SRG"/>
-                        <outlet property="scrollView" destination="TkH-LL-KNr" id="qt5-sX-eyS"/>
-                        <outlet property="str1TextField" destination="g2U-2q-sDJ" id="gXc-Ak-ePw"/>
-                        <outlet property="str2TextField" destination="Kor-lO-eMF" id="bOc-mZ-SDz"/>
+                        <outlet property="fizzBuzzButton" destination="6xA-Rb-naV" id="VzR-Jq-jEC"/>
+                        <outlet property="int1TextField" destination="375-sV-kJM" id="1TQ-ws-1uW"/>
+                        <outlet property="int2TextField" destination="0dS-rS-kXs" id="dVt-wA-xHu"/>
+                        <outlet property="limitTextField" destination="yY8-PF-8bY" id="mRP-ya-h2M"/>
+                        <outlet property="str1TextField" destination="nQ3-dD-Jjv" id="gUW-5x-ZpT"/>
+                        <outlet property="str2TextField" destination="ysj-Cn-DPo" id="7Or-IR-FQc"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JQP-vm-04H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDZ-9k-45a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="-17"/>
+            <point key="canvasLocation" x="-337" y="-21"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

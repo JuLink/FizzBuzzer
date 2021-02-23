@@ -10,7 +10,9 @@ import XCTest
 
 class FakeRepo: Repository {
     var numberOfCallToAdd = 0
-    var fizzBuzzParametersHits: [FizzBuzzerParameter : Int] = [:]
+    @Published var fizzBuzzParametersHits: [FizzBuzzerParameter : Int] = [:]
+    var fizzBuzzParametersHitsPublished: Published<[FizzBuzzerParameter : Int]> { _fizzBuzzParametersHits }
+    var fizzBuzzParametersHitsPublisher: Published<[FizzBuzzerParameter : Int]>.Publisher { $fizzBuzzParametersHits }
     func addHit(to fizzbuzzParameter: FizzBuzzerParameter) {
         numberOfCallToAdd += 1
     }
