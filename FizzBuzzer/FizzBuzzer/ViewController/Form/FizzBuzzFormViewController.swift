@@ -36,6 +36,7 @@ class FizzBuzzFormViewController: UIViewController {
         
         self.navigationItem.title = "FizzBuzz"
         self.navigationController?.tabBarItem.title = "FizzBuzz"
+        self.navigationController?.tabBarItem.image = UIImage(systemName: "zzz")
 
         // Do any additional setup after loading the view.
         self.int1TextField.delegate = self
@@ -58,7 +59,15 @@ class FizzBuzzFormViewController: UIViewController {
     }
     
     @IBAction func showFizzBuzz(_ sender: Any) {
-        self.viewModel.formValidated()
+        if let parameter = viewModel.fizzbuzzParameter {
+            let storyboard = UIStoryboard(name: "FizzBuzzListStoryboard", bundle: nil)
+            let listViewModel = FizzBuzzListViewModel(fizzbuzzParameter: parameter)
+            let fizzbuzzListVC = storyboard.instantiateViewController(identifier: FizzBuzzListTableViewController.storyboardId) { (coder) -> FizzBuzzListTableViewController? in
+                FizzBuzzListTableViewController(coder: coder, viewModel: listViewModel)
+            }
+            self.viewModel.formValidated()
+            self.navigationController?.pushViewController(fizzbuzzListVC, animated: true)
+        }
     }
     
     func checkButtonVisibility() {
