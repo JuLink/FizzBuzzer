@@ -35,9 +35,6 @@ class StatisticsViewModelTests: XCTestCase {
         //Given
         let sut = StatisticsViewModel(repository: FakeRepo())
         
-        //When
-        sut.load()
-        
         //Then
         XCTAssertEqual(sut.totalNumberOfHitTitle, "Total: 200 hits")
     }
@@ -45,9 +42,6 @@ class StatisticsViewModelTests: XCTestCase {
     func testTotalHitsSingleString() throws {
         //Given
         let sut = StatisticsViewModel(repository: FakeRepo(numberOfHit: 1))
-        
-        //When
-        sut.load()
         
         //Then
         XCTAssertEqual(sut.totalNumberOfHitTitle, "Total: 1 hit")
