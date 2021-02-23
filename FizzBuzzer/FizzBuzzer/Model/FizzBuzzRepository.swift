@@ -12,6 +12,8 @@ import Foundation
  */
 public protocol Repository {
     var fizzBuzzParametersHits: [FizzBuzzerParameter: Int] { get }
+    var fizzBuzzParametersHitsPublished: Published<[FizzBuzzerParameter: Int]> { get }
+    var fizzBuzzParametersHitsPublisher: Published<[FizzBuzzerParameter: Int]>.Publisher { get }
     func addHit(to fizzbuzzParameter: FizzBuzzerParameter)
 }
 
@@ -19,7 +21,9 @@ public protocol Repository {
  This component will keep the data in memory for the all lifecycle of the app.
  */
 class FizzBuzzRepository: Repository {
-    public private(set) var fizzBuzzParametersHits: [FizzBuzzerParameter: Int] = [:]
+    @Published public private(set) var fizzBuzzParametersHits: [FizzBuzzerParameter: Int] = [:]
+    var fizzBuzzParametersHitsPublished: Published<[FizzBuzzerParameter: Int]> { _fizzBuzzParametersHits }
+    var fizzBuzzParametersHitsPublisher: Published<[FizzBuzzerParameter: Int]>.Publisher { $fizzBuzzParametersHits }
     
     init() {}
     

@@ -11,7 +11,9 @@ import XCTest
 class StatisticsViewModelTests: XCTestCase {
     
     class FakeRepo: Repository {
-        var fizzBuzzParametersHits: [FizzBuzzerParameter : Int]
+        @Published var fizzBuzzParametersHits: [FizzBuzzerParameter : Int]
+        var fizzBuzzParametersHitsPublished: Published<[FizzBuzzerParameter : Int]> { _fizzBuzzParametersHits }
+        var fizzBuzzParametersHitsPublisher: Published<[FizzBuzzerParameter : Int]>.Publisher { $fizzBuzzParametersHits }
         
         init(numberOfHit: Int = 200) {
             let fakeMapping1 = [

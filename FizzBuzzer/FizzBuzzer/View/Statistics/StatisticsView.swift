@@ -34,9 +34,6 @@ struct StatisticsView: View {
             }
             .navigationTitle(self.navigationtitle)
         }
-        .onAppear {
-            self.viewModel.load()
-        }
     }
     
     @ViewBuilder
@@ -129,7 +126,9 @@ struct StatisticsView: View {
 #if DEBUG
 
 class FakeRepo: Repository {
-    var fizzBuzzParametersHits: [FizzBuzzerParameter : Int]
+    @Published var fizzBuzzParametersHits: [FizzBuzzerParameter : Int]
+    var fizzBuzzParametersHitsPublished: Published<[FizzBuzzerParameter : Int]> { _fizzBuzzParametersHits }
+    var fizzBuzzParametersHitsPublisher: Published<[FizzBuzzerParameter : Int]>.Publisher { $fizzBuzzParametersHits }
     
     init() {
         let fakeMapping1 = [
