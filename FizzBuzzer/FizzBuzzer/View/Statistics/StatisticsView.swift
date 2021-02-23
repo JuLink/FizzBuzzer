@@ -38,13 +38,12 @@ struct StatisticsView: View {
     
     @ViewBuilder
     var histogramView: some View {
-        GeometryReader { geometry in
-            HStack(spacing: 0) {
-                ForEach(self.viewModel.formHitStatistics) { formHit in
-                    Rectangle()
-                        .fill(formHit.color)
-                        .frame(width: geometry.size.width * CGFloat(formHit.percentage))
-                }
+        HStack(alignment: .bottom) {
+            ForEach(self.viewModel.formHitStatistics) { formHit in
+                Rectangle()
+                    .fill(formHit.color)
+                    .frame(height: (self.histogramHeight * CGFloat(formHit.percentage)) / CGFloat(self.viewModel.maxPercentage))
+
             }
         }
         .frame(height: self.histogramHeight)
@@ -106,9 +105,9 @@ struct StatisticsView: View {
     let emptyHistoryText: String = "No History"
     let emptyHistoryTextColor: Color = Color.secondary
     
-    let histogramHeight: CGFloat = 40
+    let histogramHeight: CGFloat = 80
     let histogramPadding: EdgeInsets = EdgeInsets(top: 6, leading: 10, bottom: 6, trailing: 10)
-    let histogramAndTitleVerticalPadding: CGFloat = 40
+    let histogramAndTitleVerticalPadding: CGFloat = 10
     let histogramTotalHitTitleFont: Font = Font.title3
     
     let legendTileBackgroundColor: Color = Color.gray.opacity(0.2)

@@ -29,6 +29,10 @@ class StatisticsViewModel: ObservableObject {
         return "Total: \(total) \(total > 1 ? "hits" : "hit")"
     }
     
+    var maxPercentage: Double {
+        formHitStatistics.first?.percentage ?? 1.0
+    }
+    
     func hitDescription(for formHit: FormHitStatistic) -> String {
         "\(formHit.numberOfHits) \(formHit.numberOfHits > 1 ? "hits" : "hit")"
     }
